@@ -1,0 +1,555 @@
+
+/* Diğer gerekli CSS stilleri... */
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1200;
+    background-color: #FFFFFF; /* Header arka plan rengi */
+}
+.header-container {
+    height: 65px;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 16px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Logo sola yaslanacak, ama sol kenardan boşlukla */
+    margin-left: 20px; /* Ekranın sol kenarı ile logo arasında ek boşluk */
+}
+
+.header-logo img {
+    margin-right: 20px; /* Logo ile sonraki içerik arasındaki boşluk */
+}
+
+
+.main-nav {
+    height: 100%;
+    color: #000000;
+    font-size: 16px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin-right: auto; 
+}
+
+
+.main-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav-list li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.main_nav_list_item-inner {
+    color: #323A47;
+    font-size: 14px;
+    cursor: default;
+    position: relative;
+    
+}
+
+.header-right-side {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end; /* Sağ tarafı sağa yasla */
+    /* Ekranın sağ kenarı ile sağ taraftaki elementler arasında ek boşluk */
+    margin-left: auto; /* Sağ taraftaki elementleri sola doğru itele, ancak sağ kenarla arasında boşluk bırak */
+    margin-right: 20px; 
+}
+
+
+
+.header-search {
+    width: 31.99px;
+    height: 31.05px;
+    background-image: url('images/buyutec.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.header-bolbol {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Adjust spacing as needed */
+}
+
+.bolbol-icon {
+    width: 31.99px;
+    height: 31.05px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bolbol-popup-btn {
+    display: inline-block;
+    width: 76.26px;
+    height: 37.42px;
+    background-color: transparent;
+    color: #323A47;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    padding: 0;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.current-language {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Adjust spacing as needed */
+}
+
+.current-language .flag {
+    width: 28px;
+    height: 20px;
+}
+
+.current-language span {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.current-language .dropdown-arrow {
+    font-size: 18.69px;
+    line-height: 21.6px;
+    margin-left: 5px;
+}
+.main-photo {
+    width: 1519px;
+    height: 415px;
+    background-image: url('images/anafoto.jpg'); /* Fotoğrafın yolu */
+    background-size: cover;
+    background-position: center;
+    clip-path: ellipse(85% 95% at 50% 5%); /* Oval alt kısım */
+    margin: 0 auto; /* Merkezleme */
+    z-index: 1;
+}
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -100px; /* Bu değeri resminizin boyutuna göre ayarlayın */
+    margin: 0 auto;
+    width: 80%; /* Kutuların genel genişliği, ihtiyaca göre ayarlayın */
+}
+
+.service-box {
+    width: 299.4px;
+    height: 68px;
+    background-color: #F0F0F0;
+    color: #323A47;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 10px; /* Kutular arası boşluk */
+    position: relative;
+}
+
+.service-box:not(:last-child):after {
+    content: '';
+    position: absolute;
+    right: -10px; /* Kutular arası çizginin pozisyonu */
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+    width: 1px;
+    background-color: #323A47;
+  
+}
+
+#first-box {
+   
+    border-top-left-radius: 25px; /* Sol üst köşe oval */
+  
+}
+
+#last-box {
+    border-top-right-radius: 25px; /* Sağ üst köşe oval */
+}
+.combined-service-box {
+    width: 1200px; /* veya ihtiyacınıza göre ayarlayın */
+    background-color: #F0F0F0;
+    color: #323A47;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-around; /* Kutu içindeki öğeler arasında eşit boşluk bırak */
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 auto; /* Merkezle */
+    padding: 20px 0; /* İç boşluk */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Kutuya hafif bir gölge ekleyin */
+    border-radius: 25px; /* Sadece üst köşeler yuvarlak olsun */
+    border-bottom-left-radius: 0; /* Alt sol köşeyi yuvarlamayın */
+    border-bottom-right-radius: 0; /* Alt sağ köşeyi yuvarlamayın */
+  
+}
+
+.services-container {
+    position: relative;
+    top: -100px; /* Bu değeri resminizin boyutuna göre ayarlayın */
+    margin: 0 auto;
+    width: 100%; /* Genişliği ayarlayın */
+}
+
+.large-box {
+    position: relative; /* Veya 'absolute', duruma göre */
+    top: -100px; /* Üstten ne kadar uzakta olacağını ayarlayın */
+    left: 50%; /* Sol kenardan ne kadar uzakta olacağını ayarlayın */
+    transform: translateX(-50%); /* X ekseni boyunca merkezle */
+    z-index: 1050; /* Yeterince yüksek bir z-index değeri */
+    width: 1200px;
+    height: 178.6px;
+    min-height: 150px;
+    background-color: #FFFFFF;
+    padding: 30px 40px 10px;
+    box-sizing: border-box;
+    margin: 0;
+    border-radius: 0;
+    padding-top: 20px; /* Üstte boşluk */
+    padding-left: 20px; /* Sola boşluk */
+    /* son ekleme */
+    flex-direction: column; /* İçerikleri dikey olarak hizalayın */
+    align-items: flex-start; /* İçerikleri sol tarafa hizala */
+    padding-left: 20px; /* İç içe içerikler için sol tarafta boşluk bırak */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.rectangle-box {
+    width: 177.04px;
+    height: 22px;
+    background-color:  #f0f0f0;
+    color:#363636;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    padding: 3px 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.boxes-container {
+    display: flex; /* Bu konteyner içindeki kutuları yan yana getirir */
+    justify-content: flex-start; /* Kutuları sol tarafa hizala */
+}
+.one-way {
+    margin-right: 12.08px; /* İki kutu arasında yatay boşluk */
+}
+.info-container {
+    display: flex;
+    align-items: center;
+    margin-top: 14px;
+}
+
+
+
+  .date-detail {
+    display: block;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: #323A47;
+    border-bottom: 1px solid #323A47; /* Metnin altını çiz */
+    margin: 14px 0 0;
+    padding-right: 20px; /* İkon ve metin arası boşluk */
+}
+
+
+
+
+.day {
+    font-size: 12px; /* Pazar günü için font boyutu */
+    margin-left: 4px;
+}
+
+
+.info-container {
+    display: flex;
+    flex-wrap: wrap; /* İçerik çoksa yeni satıra geç */
+    align-items: center;
+    margin-top: 14px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* İtemler arası boşluk */
+    margin-bottom: 12px; /* Alt elemanlardan boşluk */
+}
+
+.info-item span {
+    display: block;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: #323A47;
+    letter-spacing: 0.05em; /* Harf aralığını artır */
+    border-bottom: 1px solid #323A47; /* Metnin altını çiz */
+    margin: 14px 20px 14px 0; /* Sağa ve sola marj ekle */
+    padding-right: 20px; /* Sağa padding ekle */
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px; /* İkon ve metin arası boşluk */
+}
+
+.search-box {
+    width: 200px;
+    height: 70px;
+    background-color: #ff7f00; /* Turuncu arka plan */
+    color: #ffffff; /* Beyaz metin */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center; /* Metni dikey olarak ortala */
+    justify-content: center; /* Metni yatay olarak ortala */
+    margin-left: auto; /* Kutuyu sağa yasla */
+    padding: 0 20px; /* İçerik için padding */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* İçerikleri merkezle */
+    width: 90%; /* Genel genişlik, .large-box ve .new-bottom-box için */
+    margin: auto; /* Sayfanın ortasında konumlandır */
+}
+
+
+.new-bottom-box {
+    width: 1200px; /* Konteynerin genişliğine uyum sağlar */
+    height: 50px; /* Kutunun yüksekliği */
+    background-color: #f4f5f7; /* Arka plan rengi */
+    display: flex;
+    align-items: center; /* İçerikleri dikey olarak ortala */
+    padding: 15px;
+    border-radius: 0 0 25px 25px; /* Sol ve sağ alt köşeleri oval */
+    box-sizing: border-box;
+    margin-top: -100px;
+    margin-left: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    /* Yeni alt kutu için ek stiller */
+}
+
+.question-icon {
+    width: 66px;
+    height: 40px; /* İkon boyutu */
+    margin-right: 20px; /* Sağdaki metinle arasında boşluk */
+}
+
+.text-content span {
+    color: #323a47;
+    display: block; /* Her metni yeni satıra getir */
+    /* Metin için ek stiller */
+}
+
+.plan-text, .discover-text {
+    font-family: 'Open Sans', sans-serif;
+    margin: 2px 0; /* Metinler arası boşluk */
+}
+
+.search-icon {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle; /* İkonu metnin ortasına hizala */
+    margin-left: 10px; /* Metin ile ikon arasında boşluk */
+}
+
+/* Ekran boyutuna göre ayarlar */
+@media (max-width: 768px) {
+    .new-bottom-box {
+        width: 100%; /* Küçük ekranlarda genişliği ayarla */
+        margin-left: 0; /* Sol kenar boşluğunu sıfırla */
+        margin-right: 0; /* Sağ kenar boşluğunu sıfırla */
+        left: 0; /* Küçük ekranlarda sola hizala */
+        transform: none; /* Küçük ekranlarda dönüşümü kaldır */
+    }
+}
+
+.new-box {
+    display: flex;
+    align-items: flex-start; /* İçeriklerin üst kenarlarını hizala */
+    background-color: #90ee90; /* Açık yeşil arka plan rengi */
+    padding: 10px;
+    border-radius: 25px;
+    margin:  20px auto;
+    height: 85.64px;
+    width: 1180px;
+    max-width: 1400px;
+    flex-wrap: wrap; /* İçerik çok uzunsa yeni satıra geç */
+}
+
+.left-content {
+    display: flex;
+    align-items: center;
+    margin: left 20px;;
+}
+
+.box-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px; /* Logonun ve "SÜRDÜRÜLEBİLİRLİK" yazısı arasındaki boşluk */
+    margin-top: 30px;
+}
+
+.sustainability {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-right: 20px; /* Metin ve sağ içerik arasındaki boşluk */
+    margin-top: 30px;
+}
+
+.right-content {
+    max-width: 600px; /* Sağ içeriğin maksimum genişliği */
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.yonca-icon {
+    width: 100px;
+    height: 100px;
+    margin-left: auto; /* Sağa yaslanmış */
+    margin-top: -10px;
+}
+
+.detail-button {
+    width: 155.57px;
+    height: 44px;
+    background-color: #006400; /* Koyu yeşil */
+    color: #FFFFFF; /* Beyaz metin rengi */
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    border: none; /* Kenarlık yok */
+    border-radius: 5px; /* Köşeleri yuvarla */
+    margin-right: 30px; /* Yonca ikonu ile arasındaki boşluk */
+    margin-top: 30px ;
+    margin-left: 70px;
+}
+
+.detail-button:hover {
+    background-color: #008000; /* Butonun üzerine gelindiğinde rengi biraz daha açık yeşile dönüşsün */
+}
+.new-orange-box {
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 1200px;
+    height: auto; /* İçerik boyutuna göre yükseklik */
+    background-color: #ff7f00;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.new-orange-box {
+    
+    width: 1160px;
+    height: 282px;
+    background-color: #ff7f00; /* Turuncu arka plan */
+    border-radius: 25px; /* Köşeleri oval */
+    margin: 20px auto; /* Üst ve alttan boşluk, otomatik yandan merkezleme */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+}
+.mobile-app-promo {
+    display: block; /* Block element olarak davranmasını sağlar */
+    width: 503.6px;
+    height: 29.6px;
+     /* Arka plan rengi */
+    color:#273444; /* Yazı rengi beyaz */
+    font-size: 22px; /* Yazı boyutu */
+    font-family: 'Open Sans', sans-serif; /* Yazı tipi */
+    margin: 0px 0px 37px; /* Alt margini 37px */
+    
+    border-radius: 5px; /* Köşeleri hafifçe ovalleştir */
+    padding: 20px 10px 10px 10px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 16px; /* Her özellik bloğunun altına 16px boşluk */
+
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px; /* İkon ile metin arasında 10px boşluk */
+}
+
+.feature span {
+    color: #ffffff; /* Metin rengi */
+    font-size: 16px; /* Metin boyutu */
+    font-family: 'Open Sans', sans-serif
+}
+
+.mobile-app-promo, .feature {
+    margin-left: 50px; /* Sol taraftan 50px boşluk ekleyerek sağa kaydır */
+}
+
+
+.turuncu-telefon {
+    width: 170px;
+    height: 290px;
+    margin-left: 620px; /* Resim ile metin arasında boşluk */
+    right: 1150px;
+    margin-top: -245px;
+}
+
+.qr-section {
+   
+   
+    z-index: 1000; 
+    margin-left: 1000px;
+    margin-top: -300px;
+}
+
+.promo-image {
+    width: 156px;
+    height: 156px; /* Resim boyutları */
+    align-self: flex-end; /* Kendini sağa hizala */
+}
+
+.qr-text {
+    text-align: center; /* Metni ortala */
+    color: #ffffff; /* Metin rengi beyaz */
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 10px; /* Resim ile metin arasındaki boşluk */
+    align-self: flex-end; /* Kendini sağa hizala */
+    margin-right: 40px;
+}
